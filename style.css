@@ -1,0 +1,147 @@
+body{
+    background-color: white;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #08407A;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    gap: 2em;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: auto;
+    padding-left: 1%;
+}
+
+.conteudo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 2em;
+}
+
+.banner {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner h1 {
+    color: white;
+    padding-bottom: 1em;
+}
+
+.banner p {
+    color: white;
+    width: 35%;
+    text-align: justify;
+}
+
+.conteudo-banner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4em;
+}
+
+.seçao-cards {
+    padding: 2em;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.seçao-cards h1 {
+    margin-bottom: 1em;
+    color: #08407A;
+}
+
+.cards-conteudo img {
+    width: 40vh;
+    height: 30vh;
+}
+
+.cards-conteudo h2 {
+    font-size: 2rem;
+}
+
+.cards-conteudo h3 {
+    font-size: 1rem;
+}
+
+.cards-conteudo p {
+    width: 20%;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .banner p {
+        width: 90%;
+        padding-right: 1em;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
+
+    .conteudo-banner {
+        padding-left: 1em;
+        padding-right: 1em;
+        align-items: center;
+        align-items: center;
+    }
+
+    .banner h1 {
+        text-align: center;
+    }
+
+    .conteudo-menu {
+        gap: 1em;
+        padding-right: 0;
+    }
+
+    .logo {
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: 1em;
+    }
+}
