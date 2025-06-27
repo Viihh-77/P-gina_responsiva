@@ -35,6 +35,8 @@ li {
     list-style: none;
 }
 
+/* Cabeçalho */
+
 .logo {
     display: flex;
     align-items: center;
@@ -49,6 +51,17 @@ li {
     justify-content: space-around;
     padding-right: 2em;
 }
+
+.botao-burguer {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/*Seção destaque/Banner*/
 
 .banner {
     position: relative;
@@ -69,12 +82,14 @@ li {
 .banner h1 {
     color: white;
     padding-bottom: 1em;
+    font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 .banner p {
     color: white;
     width: 35%;
     text-align: justify;
+    font-size: clamp(1rem, 0.5vw, 2rem);
 }
 
 .conteudo-banner {
@@ -86,6 +101,8 @@ li {
     padding-left: 4em;
 }
 
+/*Cards de informações dos tubarões*/
+
 .seçao-cards {
     padding: 2em;
     background-color: #f0f8ff;
@@ -93,29 +110,126 @@ li {
 }
 
 .seçao-cards h1 {
-    margin-bottom: 1em;
+    font-size: 3rem;
+    margin: 1em;
     color: #08407A;
 }
 
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.cards-conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #1565c0;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #e3f2fd;
+    box-shadow: 0 5px 20px rgba(21, 101, 192, 0.5);
+    width: 100%;
+    max-width: 400px;
+    color: #08407A;  
+    transition: transform 0.3s ease-in-out;    
+}
+
 .cards-conteudo img {
-    width: 40vh;
-    height: 30vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 .cards-conteudo h2 {
     font-size: 2rem;
+    padding-top: 0.5em;
 }
 
 .cards-conteudo h3 {
     font-size: 1rem;
+    padding-top: 0.3em;
 }
 
 .cards-conteudo p {
-    width: 20%;
+    width: 90%;
     text-align: justify;
+    padding-top: 1em;
 }
 
-@media screen and (max-width: 768px) {
+.cards-conteudo:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #08407A;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 0.5rem;
+}
+
+.rodape h3 {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.rodape p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.links {
+    padding-bottom: 1rem;
+}
+
+.links a {
+    color: white;
+    padding-left: 1rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociais a {
+    color: white;
+}
+
+/* Responsvidade */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 8vh;
+        width: auto;
+    }
+    
+    .conteudo-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .botao-burguer {
+        display: block;
+        padding-right: 0.5em;
+    }
+
+    /* Banner */
+
     .banner p {
         width: 90%;
         padding-right: 1em;
@@ -134,14 +248,112 @@ li {
         text-align: center;
     }
 
-    .conteudo-menu {
-        gap: 1em;
-        padding-right: 0;
+    /* Cards */
+
+    .seçao-cards {
+        padding: 2em;
+        background-color: #f0f8ff;
+        text-align: center;
+    }
+    
+    .seçao-cards h1 {
+        font-size: 3rem;
+        margin: 1em;
+        color: #08407A;
+    }
+    
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        padding: 2rem;
     }
 
-    .logo {
-        justify-content: center;
-        padding-left: 0;
-        margin-bottom: 1em;
+    .cards-conteudo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #1565c0;
+        border-radius: 20px;
+        padding: 30px;
+        background-color: #e3f2fd;
+        box-shadow: 0 5px 20px rgba(21, 101, 192, 0.5);
+        width: auto;
+        color: #08407A;      
+    }
+
+}
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Banner */
+
+    .banner p {
+        width: 90%;
+        padding-right: 1em;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
+
+    .conteudo-banner {
+        padding-left: 1em;
+        padding-right: 1em;
+        align-items: center;
+        align-items: center;
+    }
+
+    .banner h1 {
+        text-align: center;
+    }
+
+    /* Cards */
+
+    .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+    padding: 2rem;
+    }
+
+    .cards-conteudo {
+    width: 70%;
+    max-width: 500px;
+    }
+
+    .cards-conteudo:hover {
+    transform: scale(1.1);
+    }
+
+    .cards-conteudo h2 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    }
+
+    .cards-conteudo h3 {
+        font-size: clamp(1rem, 1.5vw, 1.4rem);
+    }
+
+    .cards-conteudo p {
+        font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        justify-items: center;
+        align-items: stretch;
+        padding: 2rem;
+    }
+
+    .cards-conteudo {
+        width: 80%;
+        max-width: 500px;
     }
 }
