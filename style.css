@@ -140,6 +140,7 @@ li {
 }
 
 .cards-conteudo img {
+    border-radius: 20px;
     max-width: 100%;
     width: auto;
     height: auto;
